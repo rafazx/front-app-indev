@@ -29,7 +29,7 @@ export default function Main( { match }) {
     }, [match.params.id]);
 
     useEffect(() => {
-        const socket = io('https://app-backend-tindev.herokuapp.com', {
+        const socket = io(process.env.REACT_APP_API_SOCKET_URL, {
             query : {
                 user : match.params.id
             }

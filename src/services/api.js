@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL : 'https://app-backend-tindev.herokuapp.com/api'
+    baseURL : process.env.REACT_APP_API_DEV_URL
 })
 
 export default api;
